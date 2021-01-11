@@ -40,7 +40,7 @@ class MovieHero extends StatelessWidget {
                       gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
-                    colors: [Color(222), Color(100), Color(111)],
+                    // colors: [Color(222), Color(100), Color(111)],
                   )),
                 )
               ],

@@ -14,15 +14,12 @@ import 'package:xianliao/services/cache/sql_util.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-
-void main() {
+void main() async {
   dio.interceptors.add(CustomInterceptors());
   Env.apiClient = RealAPI();
   WidgetsFlutterBinding.ensureInitialized();
-  DbUtil().init().then((value){
-    print('init dio headers');
-    initOptions();
-  });
+  await DbUtil().init();
+  await initOptions();
 
   runApp(MyApp());
 }
